@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        table {
+            width: 100%;
+        }
+        th,
+        td {
+            border: thin solid black;
+            padding: 8px;
+        }
+        th {
+            background-color: #2b3761;
+            color: white;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Formulário de Requisição de Materiais de Consumo</title>
+</head>
+
+<body>
+
+    
+
+    <h1>Requisição de Materiais de Consumo</h1>
+
+    <form name="materialRequestForm" action="nomeDoArquivo.php" method="post" onsubmit="return validateForm();">
+        <h2>Cabeçalho da Requisição</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Solicitante</th>
+                    <th>Filial</th>
+                    <th>Departamento</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="SOLICITANTE" placeholder="Nome do Solicitante"></td>
+                    <td><input type="text" name="FILIAL" placeholder="Nome da Filial"></td>
+                    <td><input type="text" name="DEPARTAMENTO" placeholder="Nome do Departamento"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Detalhes da Requisição</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <th>Número</th>
+                    <th>Data de Emissão</th>
+                    <th>Solicitação</th>
+                    <th>Data de Entrega</th>
+                    <th>Prioridade</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="NUMERO_SOLICITACAO" placeholder="Número da Solicitação"></td>
+                    <td><input type="date" name="DATA_EMISSAO"></td>
+                    <td><input type="text" name="SOLICITACAO" placeholder="Descrição da Solicitação"></td>
+                    <td><input type="date" name="DATA_ENTREGA"></td>
+                    <td><input type="text" name="PRIORIDADE" placeholder="Prioridade da Solicitação"></td>
+                </tr>
+                <tr>
+                    <th>Tipo</th>
+                    <th colspan="2">Loja Sleep</th>
+                    <th colspan="2">Filial</th>
+                </tr>
+                <tr>
+                    <td><input type="text" name="TIPO" placeholder="Tipo de Requisição"></td>
+                    <td colspan="2"><input type="text" name="LOJA" placeholder="Nome da Loja"></td>
+                    <td colspan="2"><input type="text" name="FILIAL" placeholder="Nome da Filial"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Itens da Requisição</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Seq</th>
+                    <th>Item</th>
+                    <th>Quantidade</th>
+                    <th>Data de Entrega</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" name="SEQUNCIA" placeholder="Número da Sequência"></td>
+                    <td><input type="text" name="ITEM" placeholder="Descrição do Item"></td>
+                    <td><input type="text" name="QTDE" placeholder="Quantidade"></td>
+                    <td><input type="date" name="DATA_ENTREGA" placeholder="Data de Entrega"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <input type="submit" value="Enviar Requisição">
+    </form>
+</body>
+
+</html>
